@@ -6,7 +6,7 @@ else
 	PS1='\e[0;37m┬─╢\e[4;37m \h \e[0;37m│\e[4;32m \w \e[4;37m$(__git_ps1 "│\e[4;31m %s \e[4;37m")│\e[4;36m \@ \e[4;37m╟──\e[0;37m\n╰─\e[0;37m\$ '
 fi
 
-function cdls () {
+cdls () {
     cd "$@" && ls
 }
 
