@@ -1,5 +1,8 @@
 #!/bin/bash
-cp .profile ~/.profile
+rm ~/.git-prompt.sh
+rm ~/.profile
+
 cp .git-prompt.sh ~/.git-prompt.sh
+cp .profile ~/.profile
 
 source ~/.profile
