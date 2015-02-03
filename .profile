@@ -8,4 +8,4 @@ fi
 
 function cdls () {
     cd "$@" && ls
-}
+)
