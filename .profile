@@ -1,4 +1,5 @@
 source ~/.git-prompt.sh
+
 if [ $(id -u) -eq 0 ];
 then
 	PS1='\e[0;31m┬─╢\e[4;31m \h \e[0;31m│\e[4;31m \w \e[0;31m$(__git_ps1 "│\e[4;31m %s \e[0;31m")│\e[4;31m \@ \e[0;31m╟──\e[0;37m\n╰─\$ '
