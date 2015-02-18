@@ -21,6 +21,11 @@ bash-update () {
 	./update.sh
 }
 
+subl-update () {
+	cd ~/.config/sublime-text-3/Packages/User
+	git pull
+}
+
 wicky () {
 	echo "wacky"
 }
