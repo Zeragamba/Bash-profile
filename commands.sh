@@ -1,5 +1,6 @@
 cdls () {
-    cd "$@" && ls
+    cd "$@"
+    ls
 }
 
 dev () {
@@ -18,7 +19,6 @@ home () {
 bash-update () {
 	cd ~/.bash
 	git pull
-	./update.sh
 }
 
 subl-update () {

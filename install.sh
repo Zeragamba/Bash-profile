@@ -1,6 +1,4 @@
 #!/bin/bash
-source ./update.sh
-
 sed -i -e '$a\' ~/.bashrc
 echo "source ~/.profile" >> ~/.bashrc
 
