@@ -38,3 +38,18 @@ then
 	# start sublime once to let package manager run
 	subl
 fi
+
+if [ -z $(which ruby) ];
+then
+	sudo apt-get install ruby-full -y
+fi
+
+if [ -z $(which curl) ];
+then
+	sudo apt-get install curl -y
+fi
+
+if [ -z $(which nvm) ];
+then
+	curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+fi
