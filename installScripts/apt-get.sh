@@ -1,4 +1,4 @@
-# source ~/.bash/installScripts/utilities/ptMono.sh
+source ~/.bash/installScripts/utilities/ptMono.sh
 
 if [ -z $(which htop) ];
 then
