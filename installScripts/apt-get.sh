@@ -1,17 +1,22 @@
-source ~/.bash/installScripts/utilities/ptMono.sh
+# source ~/.bash/installScripts/utilities/ptMono.sh
 
-if [ ! -z $(which git) ];
+if [ -z $(which htop) ];
+then
+	sudo apt-get install htop -y
+fi
+
+if [ -z $(which git) ];
 then
 	sudo apt-get install git -y
 fi
 
-if [ ! -z $(which nautilus) ];
+if [ -z $(which nautilus) ];
 then
 	sudo apt-get install nautilus-open-terminal -y
 	nautilus -q
 fi
 
-if [ ! -z $(which subl) ];
+if [ -z $(which subl) ];
 then
 	# get the installer
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3
