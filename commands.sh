@@ -1,5 +1,5 @@
 cdls () {
-    cd "$@"
+    cd $@
     ls
 }
 
@@ -31,5 +31,5 @@ wicky () {
 }
 
 chrome () {
-	daemon google-chrome
+	daemon google-chrome $@
 }
