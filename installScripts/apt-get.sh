@@ -1,14 +1,12 @@
 source ~/.bash/installScripts/utilities/ptMono.sh
+curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
-if [ -z $(which htop) ];
-then
-	sudo apt-get install htop -y
-fi
-
-if [ -z $(which git) ];
-then
-	sudo apt-get install git -y
-fi
+sudo apt-get install htop -y
+sudo apt-get install git -y
+sudo apt-get install ruby-full -y
+sudo apt-get install curl -y
+sudo apt-get install daemon -y
+sudo apt-get install libxss1 libappindicator1 libindicator7
 
 if [ -z $(which nautilus) ];
 then
@@ -39,17 +37,8 @@ then
 	subl
 fi
 
-if [ -z $(which ruby) ];
+if [ -z $(which google-chrome) ];
 then
-	sudo apt-get install ruby-full -y
-fi
-
-if [ -z $(which curl) ];
-then
-	sudo apt-get install curl -y
-fi
-
-if [ -z $(which nvm) ];
-then
-	curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
-fi
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome*.deb
+fi;

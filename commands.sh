@@ -29,3 +29,7 @@ subl-update () {
 wicky () {
 	echo "wacky"
 }
+
+chrome () {
+	daemon google-chrome
+}
