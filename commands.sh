@@ -34,3 +34,7 @@ wicky () {
 chrome () {
 	daemon google-chrome $@
 }
+
+firefox () {
+	daemon firefox $@
+}
