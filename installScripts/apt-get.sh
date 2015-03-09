@@ -6,7 +6,7 @@ sudo apt-get install git -y
 sudo apt-get install ruby-full -y
 sudo apt-get install curl -y
 sudo apt-get install daemon -y
-sudo apt-get install libxss1 libappindicator1 libindicator7
+sudo apt-get install libxss1 libappindicator1 libindicator7 -y
 
 if [ -z $(which nautilus) ];
 then
