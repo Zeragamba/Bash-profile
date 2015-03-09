@@ -1,5 +1,6 @@
 cdls () {
     cd $@
+    echo "== $PWD:"
     ls
 }
 

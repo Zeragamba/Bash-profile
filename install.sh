@@ -1,4 +1,6 @@
 #!/bin/bash
+cp ~/.bash/.profile ~/.profile
+
 sed -i -e '$a\' ~/.bashrc
 echo "source ~/.profile" >> ~/.bashrc
 
