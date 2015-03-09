@@ -42,3 +42,8 @@ then
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo dpkg -i google-chrome*.deb
 fi;
+
+if [-!e "~/.nvm/nvm.sh"];
+then
+	curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
+if;
