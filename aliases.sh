@@ -1,4 +1,5 @@
 alias cls="clear"
+alias baka='sudo $(history -p \!\!)'
 
 alias gco="git checkout"
 alias gst="git status"
