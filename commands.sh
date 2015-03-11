@@ -25,6 +25,7 @@ bash-update () {
 subl-update () {
 	cd ~/.config/sublime-text-3/Packages/User
 	git pull
+	subl
 }
 
 wicky () {
