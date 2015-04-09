@@ -46,4 +46,4 @@ fi;
 if [-!e "~/.nvm/nvm.sh"];
 then
 	curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
-if;
+fi;
