@@ -39,3 +39,12 @@ chrome () {
 firefox () {
 	daemon -- firefox $@
 }
+
+files () {
+	if [ -n $(which nemo) ];
+	then
+		daemon -- nemo $@
+	else
+		deamon -- naut $@
+	fi;
+}
