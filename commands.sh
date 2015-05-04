@@ -33,9 +33,9 @@ wicky () {
 }
 
 chrome () {
-	daemon google-chrome $@
+	daemon -- google-chrome-stable --touch-devices=123 $@
 }
 
 firefox () {
-	daemon firefox $@
+	daemon -- firefox $@
 }
