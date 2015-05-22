@@ -33,7 +33,7 @@ wicky () {
 }
 
 chrome () {
-	daemon -- google-chrome-stable --touch-devices=123 $@
+	daemon -- google-chrome-stable $@
 }
 
 firefox () {
@@ -43,8 +43,8 @@ firefox () {
 files () {
 	if [ -n $(which nemo) ];
 	then
-		daemon -- nemo $@
+		daemo -- nemo "$@"
 	else
-		deamon -- naut $@
+		deamo -- naut "$@"
 	fi;
 }
