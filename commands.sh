@@ -19,12 +19,12 @@ home () {
 
 bash-update () {
 	cd ~/.bash
-	git pull
+	git pull --rebase
 }
 
 subl-update () {
 	cd ~/.config/sublime-text-3/Packages/User
-	git pull
+	git pull --rebase
 	subl
 }
 
