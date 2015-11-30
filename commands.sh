@@ -1,9 +1,3 @@
-cdls () {
-    cd $@
-    echo "== $PWD:"
-    ls
-}
-
 dev () {
 	if [ $# -gt 0 ];
 	then
