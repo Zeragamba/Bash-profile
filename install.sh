@@ -1,8 +1,6 @@
 #!/bin/bash
-cp ~/.bash/.profile ~/.profile
-
 sed -i -e '$a\' ~/.bashrc
-echo "source ~/.profile" >> ~/.bashrc
+echo "source ~/.bash/.profile" >> ~/.bashrc
 
 git config --global user.name "Stephen A. Wilson"
 git config --global user.email "Stephen-356@hotmail.com"
