@@ -14,6 +14,7 @@ home () {
 bash-update () {
 	cd ~/.bash
 	git pull --rebase
+	source ~/.bash_profile
 }
 
 subl-update () {
