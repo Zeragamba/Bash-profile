@@ -28,6 +28,5 @@ wicky () {
 
 
 cdls () {
-	cd $1
-	ls
+	cd $1 && ls
 }
