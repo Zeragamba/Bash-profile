@@ -25,20 +25,3 @@ subl-update () {
 wicky () {
 	echo "wacky"
 }
-
-chrome () {
-	daemon -- google-chrome-stable $@
-}
-
-firefox () {
-	daemon -- firefox $@
-}
-
-files () {
-	if [ -n $(which nemo) ];
-	then
-		daemo -- nemo "$@"
-	else
-		deamo -- naut "$@"
-	fi;
-}
