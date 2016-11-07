@@ -25,3 +25,9 @@ subl-update () {
 wicky () {
 	echo "wacky"
 }
+
+
+cdls () {
+	cd $1
+	ls
+}
