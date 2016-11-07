@@ -3,6 +3,7 @@ alias h="history"
 alias cls="clear"
 alias baka='sudo $(history -p \!\!)'
 alias "cd.."="cd .."
+alias cdl="cdls"
 
 alias gco="git checkout"
 alias gst="git status"
