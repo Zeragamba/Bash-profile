@@ -10,8 +10,3 @@ alias gpl="git pull"
 alias gph="git push"
 alias gad="git add"
 
-#ruby aliases
-alias rspec="bundle exec rspec"
-alias rails="bundle exec rails"
-alias rake="bundle exec rake"
-
