@@ -15,6 +15,7 @@ __prompt_command() {
 	PS1+="${Chost} \h ${Cnorm}|"
 	PS1+="${Cpath} \w ${Cnorm}|"
 	PS1+="$(__git_ps1 "${Cgit} %s ${Cnorm}|")"
+	PS1+="${Ctime} \@ ${Cnorm}|"
 	PS1+="${Cexit} ${EXIT} ${Cnorm}"
 	
 	PS1+="${Cnorm}╟──\n╰─\$ "
