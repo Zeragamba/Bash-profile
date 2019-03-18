@@ -17,17 +17,6 @@ bash-update () {
 	source ~/.bash_profile
 }
 
-subl-update () {
-	cd ~/.config/sublime-text-3/Packages/User
-	git pull --rebase
-	subl
-}
-
-wicky () {
-	echo "wacky"
-}
-
-
 cdls () {
 	cd $1 && ls
 }
