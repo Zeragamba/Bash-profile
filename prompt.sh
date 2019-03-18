@@ -30,9 +30,11 @@ __prompt_command() {
 	# Git Info
 	PS1+="$(__git_ps1 "${Cgit} %s ${Cnorm}│")"
 
-
 	# Time
-	PS1+="${Ctime} \@ ${Cnorm}"
+	PS1+="${Ctime} $(date +"%H:%M") ${Cnorm}│"
+
+	# Exit Code
+	PS1+="${Cexit} ${EXIT} ${Cnorm}"
 
 	#end line
 	PS1+="${Cnorm}├──\n"
@@ -65,7 +67,7 @@ __prompt_command() {
 	fi
 	
 	# Exit code, and prompt
-	PS1+="╰╴${EXIT}╶╴\$ "
+	PS1+="╰╴\$ "
 }
 
 GIT_PS1_SHOWDIRTYSTATE=true
