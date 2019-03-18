@@ -16,36 +16,56 @@ __prompt_command() {
 	local Cpath='\[\e[4;32m\]'
 	local Cgit='\[\e[4;31m\]'
 	local Ctime='\[\e[4;36m\]'
-	local Clang='\[\e[4;91m\]'
+	local Clang='\[\e[4;37m\]'
 	local Cexit='\[\e[4;35m\]'
 	
 	PS1="${Cnorm}┬─┤"
 
 	# Hostname
-	PS1+="${Chost} \h ${Cnorm}|"
+	PS1+="${Chost} \h ${Cnorm}│"
 
 	# Working directory
-	PS1+="${Cpath} \w ${Cnorm}|"
+	PS1+="${Cpath} \w ${Cnorm}│"
 
 	# Git Info
-	PS1+="$(__git_ps1 "${Cgit} %s ${Cnorm}|")"
+	PS1+="$(__git_ps1 "${Cgit} %s ${Cnorm}│")"
 
-	# Languages
-	if [ "$PROMPT_SHOW_LANGS" = true ]; then
-		if [ -x "$(command -v ruby)" ]; then
-			PS1+="${Clang} Ruby:$(ruby -e "puts RUBY_VERSION") ${Cnorm}│"
-		fi
-
-		if [ -x "$(command -v node)" ]; then
-			PS1+="${Clang} Node:$(node -e "console.log(process.version)") ${Cnorm}│"
-		fi
-	fi
 
 	# Time
-	PS1+="${Ctime} \@ ${Cnorm}|"
+	PS1+="${Ctime} \@ ${Cnorm}"
 
+	#end line
+	PS1+="${Cnorm}├──\n"
+	# Languages
+
+	if [ "$PROMPT_SHOW_LANGS" = true ]; then
+		PS1+="│ ├╴Ruby:   "
+		if [ -x "$(command -v ruby)" ]; then
+			PS1+="$(ruby -e "puts RUBY_VERSION")"
+		else
+			PS1+="-"
+		fi
+		PS1+="\n"
+
+		PS1+="│ ├╴Node:   "
+		if [ -x "$(command -v node)" ]; then
+			PS1+="$(node -e "console.log(process.version)")"
+		else
+			PS1+="-"
+		fi
+		PS1+="\n"
+
+		PS1+="│ └╴Python: "
+		if [ -x "$(command -v node)" ]; then
+			PS1+="$(python -c "import platform; print(platform.python_version())")"
+		else
+			PS1+="-"
+		fi
+		PS1+="\n"
+	fi
+	
 	# Exit code, and prompt
-	PS1+="${Cnorm}├──\n╰╴${EXIT}╶╴\$ "
+	PS1+="╰╴${EXIT}╶╴\$ "
 }
 
 GIT_PS1_SHOWDIRTYSTATE=true
