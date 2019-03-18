@@ -72,5 +72,5 @@ GIT_PS1_SHOWDIRTYSTATE=true
 PROMPT_COMMAND=__prompt_command
 
 if [ ! -f ~/.bash/.prompt-langs ]; then
-	prompt-langs
+	prompt-langs off
 fi
