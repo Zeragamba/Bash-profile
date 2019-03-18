@@ -29,11 +29,9 @@ __prompt_command() {
 
 	# Git Info
 	PS1+="$(__git_ps1 "${Cgit} %s ${Cnorm}|")"
-	PS1+="${Ctime} \@ ${Cnorm}|"
 
 	# Languages
 	if [ "$PROMPT_SHOW_LANGS" = true ]; then
-		# languages
 		if [ -x "$(command -v ruby)" ]; then
 			PS1+="${Clang} Ruby:$(ruby -e "puts RUBY_VERSION") ${Cnorm}│"
 		fi
@@ -50,6 +48,7 @@ __prompt_command() {
 	PS1+="${Cnorm}├──\n╰╴${EXIT}╶╴\$ "
 }
 
+GIT_PS1_SHOWDIRTYSTATE=true
 PROMPT_COMMAND=__prompt_command
 
 if [ ! -f ~/.bash/.prompt-langs ]; then
