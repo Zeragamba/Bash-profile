@@ -14,7 +14,7 @@ home () {
 bash-update () {
 	cd ~/.bash
 	git pull --rebase
-	source ~/.bash_profile
+	source ~/.bashrc
 }
 
 cdls () {
