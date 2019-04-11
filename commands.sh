@@ -15,6 +15,7 @@ bash-update () {
 	cd ~/.bash
 	git pull --rebase
 	source ~/.bashrc
+	cd -
 }
 
 cdls () {
