@@ -5,6 +5,8 @@ alias baka='sudo $(history -p \!\!)'
 alias "cd.."="cd .."
 alias cdl="cdls"
 
+alias bex="bundle exec"
+
 alias gco="git checkout"
 alias gst="git status"
 alias gpl="git pull"
