@@ -11,10 +11,13 @@ home () {
 	cd ~
 }
 
-bash-update () {
+bash-sync () {
 	cd ~/.bash
+	git add .
+	git commit -m "$(hostname) @ $(date +"%Y-%m-%d %R")"
 	git pull --rebase
-	source ~/.bashrc
+	git push
+	source ./profile.sh
 	cd -
 }
 

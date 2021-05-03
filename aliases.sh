@@ -3,7 +3,6 @@ alias h="history"
 alias cls="clear"
 alias baka='sudo $(history -p \!\!)'
 alias "cd.."="cd .."
-alias cdl="cdls"
 
 alias bex="bundle exec"
 
