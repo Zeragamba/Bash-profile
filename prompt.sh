@@ -10,7 +10,7 @@ prompt-langs() {
 
 __prompt_command() {
 	local EXIT="$?"
-	
+
 	local Cnorm='\[\e[0;37m\]'
 	local Chost='\[\e[4;37m\]'
 	local Cpath='\[\e[4;32m\]'
@@ -18,7 +18,7 @@ __prompt_command() {
 	local Ctime='\[\e[4;36m\]'
 	local Clang='\[\e[4;37m\]'
 	local Cexit='\[\e[4;35m\]'
-	
+
 	PS1="${Cnorm}┬─┤"
 
 	# Hostname
@@ -65,7 +65,7 @@ __prompt_command() {
 		fi
 		PS1+="\n"
 	fi
-	
+
 	# Exit code, and prompt
 	PS1+="╰╴\$ "
 }

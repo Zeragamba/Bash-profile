@@ -11,3 +11,5 @@ alias gst="git status"
 alias gpl="git pull"
 alias gph="git push"
 alias gad="git add"
+
+alias dc="docker compose"
