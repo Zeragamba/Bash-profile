@@ -79,6 +79,9 @@ plugins=(
   ruby
   rails
   bundler
+
+  docker
+  docker-compose
 )
 
 # User configuration
