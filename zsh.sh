@@ -3,8 +3,9 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gnzh"
+source $HOME/.bash/theme.sh
 #ZSH_THEME="agnoster"
+#source ~/.bash/themes/headline.zsh-theme
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -113,11 +114,7 @@ plugins=(
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -d "$HOME/.nvm" ] ; then
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-fi
+source $HOME/.bash/nvm-zsh.sh
 
 if [ -d "$HOME/.pyenv" ] ; then
 	export PYENV_ROOT="$HOME/.pyenv"
