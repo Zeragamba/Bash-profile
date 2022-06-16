@@ -3,8 +3,7 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-source $HOME/.bash/theme.sh
-#ZSH_THEME="agnoster"
+ZSH_THEME="zera"
 #source ~/.bash/themes/headline.zsh-theme
 
 # Set list of themes to pick from when loading at random
@@ -57,10 +56,10 @@ DISABLE_UPDATE_PROMPT="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.bash/zsh_custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -88,6 +87,12 @@ plugins=(
   docker-compose
 )
 
+NVM_AUTOLOAD=1
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -113,12 +118,3 @@ plugins=(
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-source $HOME/.bash/nvm-zsh.sh
-
-if [ -d "$HOME/.pyenv" ] ; then
-	export PYENV_ROOT="$HOME/.pyenv"
-	export PATH="$PYENV_ROOT/bin:$PATH"
-	eval "$(pyenv init --path)"
-	eval "$(pyenv virtualenv-init -)"
-fi
