@@ -2,6 +2,11 @@
 
 setopt prompt_subst
 
+pyenv_prompt_info () {
+  local version="$(pyenv version-name)"
+  echo "${ZSH_THEME_PYENV_PROMPT_PREFIX}${version:gs/%/%%}${ZSH_THEME_PYENV_PROMPT_SUFFIX}"
+}
+
 () {
 local PR_USER PR_USER_OP PR_PROMPT PR_HOST
 
@@ -24,12 +29,9 @@ else
 fi
 
 
-local return_code="%(?..%F{red}%? ↵%f)"
+local return_code="%(?..%F{red}‹%? ↵›%f)"
 local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
 local current_dir="%B%F{blue}%~%f%b"
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{cyan}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="›%f"
 
 ZSH_THEME_RUBY_PROMPT_PREFIX="%F{red}‹"
 ZSH_THEME_RUBY_PROMPT_SUFFIX="›%f"
@@ -37,7 +39,12 @@ ZSH_THEME_RUBY_PROMPT_SUFFIX="›%f"
 ZSH_THEME_NVM_PROMPT_PREFIX="%F{green}‹"
 ZSH_THEME_NVM_PROMPT_SUFFIX="›%f"
 
-PROMPT="╭─${user_host} ${current_dir} \$(ruby_prompt_info) \$(nvm_prompt_info) \$(git_prompt_info)
+ZSH_THEME_PYENV_PROMPT_PREFIX="%F{yellow}‹"
+ZSH_THEME_PYENV_PROMPT_SUFFIX="›%f"
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{cyan}‹"
+ZSH_THEME_GIT_PROMPT_SUFFIX="›%f"
+
+PROMPT="╭─${user_host} ${current_dir} \$(ruby_prompt_info) \$(nvm_prompt_info) \$(pyenv_prompt_info) \$(git_prompt_info) ${return_code}
 ╰─$PR_PROMPT "
-RPROMPT="${return_code}"
 }
