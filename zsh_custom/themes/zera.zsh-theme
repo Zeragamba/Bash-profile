@@ -28,9 +28,9 @@ else
   PR_HOST='%F{green}%M%f' # no SSH
 fi
 
-
+local os_name="$(grep -E '^NAME=' /etc/os-release | sed -En 's/NAME=\"(.*)\"/\1/p')"
 local return_code="%(?..%F{red}‹%? ↵›%f)"
-local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
+local user_host="${PR_USER}%F{cyan}@${PR_HOST} [${os_name}]"
 local current_dir="%B%F{blue}%~%f%b"
 
 ZSH_THEME_RUBY_PROMPT_PREFIX="%F{red}‹"
